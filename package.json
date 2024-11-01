@@ -1,6 +1,7 @@
 {
     "author": "Marina Gorbacheva",
     "dependencies": {
+        "com.agava.smartlogger": "1.0.0",
         "com.unity.nuget.newtonsoft-json": "3.0.2"
     },
     "description": "Template for a WebGL game, integrated into telegram bot",
