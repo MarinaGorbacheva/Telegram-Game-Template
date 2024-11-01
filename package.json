@@ -4,10 +4,11 @@
         "com.agava.smartlogger": "1.0.0",
         "com.unity.nuget.newtonsoft-json": "3.0.2"
     },
-    "description": "Template for a WebGL game, integrated into telegram bot",
+    "description": "Template for a WebGL app, integrated into telegram bot.",
     "displayName": "Telegram Game Template",
     "keywords": [
-        "telegram"
+        "unity",
+        "telegram-bot"
     ],
     "name": "com.agava.telegramgametemplate",
     "version": "1.0.0"

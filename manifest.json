@@ -1,0 +1,6 @@
+{
+    "dependencies": {
+        "com.agava.smartlogger": "https://github.com/MarinaGorbacheva/Smart-Logger.git",
+        "com.unity.nuget.newtonsoft-json": "3.0.2"
+    }
+}
