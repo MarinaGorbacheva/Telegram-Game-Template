@@ -1,0 +1,16 @@
+{
+    "name": "Agava.TelegramGameTemplate",
+    "rootNamespace": "Agava.TelegramGameTemplate",
+    "references": [
+        "GUID:609bf32c37237054a91d71ae392553c2"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

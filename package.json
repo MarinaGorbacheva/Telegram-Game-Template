@@ -1,0 +1,13 @@
+{
+    "author": "Marina Gorbacheva",
+    "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.0.2"
+    },
+    "description": "Template for a WebGL game, integrated into telegram bot",
+    "displayName": "Telegram Game Template",
+    "keywords": [
+        "telegram"
+    ],
+    "name": "com.agava.telegramgametemplate",
+    "version": "1.0.0"
+}
