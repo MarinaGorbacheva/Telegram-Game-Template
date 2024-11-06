@@ -22,18 +22,18 @@ namespace Agava.TelegramGameTemplate.Utils
 
             IEnumerator Processing()
             {
-                using (UnityWebRequest request = new UnityWebRequest(url, requestType.ToString()))
+                using UnityWebRequest request = new UnityWebRequest(url, requestType.ToString());
+                request.downloadHandler = new DownloadHandlerBuffer();
+
+                if (_timeOut.HasValue)
                 {
-                    request.downloadHandler = new DownloadHandlerBuffer();
-
-                    if (_timeOut.HasValue)
-                        request.timeout = _timeOut.Value;
-
-                    yield return request.SendWebRequest();
-
-                    LogRequestResult(request);
-                    onResponse?.Invoke(new Response(request.result, request.downloadHandler.text));
+                    request.timeout = _timeOut.Value;
                 }
+
+                yield return request.SendWebRequest();
+
+                LogRequestResult(request);
+                onResponse?.Invoke(new Response(request.result, request.downloadHandler.text));
             }
         }
 

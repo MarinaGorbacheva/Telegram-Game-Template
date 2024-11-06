@@ -1,9 +1,7 @@
 {
-    "name": "Agava.TelegramGameTemplate",
-    "rootNamespace": "Agava.TelegramGameTemplate",
-    "references": [
-        "GUID:42619556a6c07364ea9ea82b3e4611ae"
-    ],
+    "name": "Agava.SmartLogger",
+    "rootNamespace": "Agava.SmartLogger",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

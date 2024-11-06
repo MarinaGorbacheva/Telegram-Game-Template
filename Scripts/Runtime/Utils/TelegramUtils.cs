@@ -1,3 +1,4 @@
+using Agava.SmartLogger;
 using Agava.TelegramGameTemplate.Utils;
 using UnityEngine;
 
@@ -11,10 +12,16 @@ namespace Agava.TelegramGameTemplate
         public static ITelegramBotClient CreateBotClient(string botToken, IHttpRequest httpRequest)
         {
             if (string.IsNullOrEmpty(botToken))
+            {
+                Log.LogErrorMessage("Bot token shouldn't be empty.");
                 return null;
+            }
 
             if (httpRequest == null)
+            {
+                Log.LogErrorMessage("HttpRequest shouldn't be empty.");
                 return null;
+            }
 
             return new TelegramBotClient(botToken, httpRequest);
         }
@@ -23,14 +30,26 @@ namespace Agava.TelegramGameTemplate
         {
             BotToken botToken = Resources.Load<BotToken>(BotTokenAssetName);
 
-            return botToken == null ? string.Empty : botToken.Value;
+            if (botToken == null)
+            {
+                Log.LogErrorMessage($"Couldn't find {BotTokenAssetName}.asset file in Resources.");
+                return string.Empty;
+            }
+
+            return botToken.Value;
         }
 
         public static string ExtractAppName()
         {
             AppName appName = Resources.Load<AppName>(AppNameAssetName);
 
-            return appName == null ? string.Empty : appName.Value;
+            if (appName == null)
+            {
+                Log.LogErrorMessage($"Couldn't find {AppNameAssetName}.asset file in Resources.");
+                return string.Empty;
+            }
+
+            return appName.Value;
         }
 
         public static string ConstructShareLinkURL(string shareUrl, string shareMessage)

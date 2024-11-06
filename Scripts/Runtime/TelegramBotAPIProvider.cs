@@ -9,7 +9,9 @@ namespace Agava.TelegramGameTemplate
             get
             {
                 if (_telegramBotAPI == null)
+                {
                     _telegramBotAPI = new MockTelegramBotAPI();
+                }
 
                 return _telegramBotAPI;
             }
@@ -17,7 +19,9 @@ namespace Agava.TelegramGameTemplate
             set
             {
                 if (_telegramBotAPI == null)
+                {
                     _telegramBotAPI = value;
+                }
             }
         }
 

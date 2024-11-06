@@ -1,0 +1,11 @@
+{
+    "name": "com.agava.smartlogger",
+    "version": "1.0.0",
+    "description": "Smart logger that's able to print your logs pretty.",
+    "displayName": "Smart Logger",
+	"author": "Marina Gorbacheva",
+    "keywords": [
+        "unity",
+		"logger"
+    ]
+}

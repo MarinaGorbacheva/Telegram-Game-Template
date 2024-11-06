@@ -1,6 +1,6 @@
+using Agava.SmartLogger;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Agava.SmartLogger;
 
 namespace Agava.TelegramGameTemplate.Utils
 {
