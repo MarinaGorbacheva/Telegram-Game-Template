@@ -5,25 +5,20 @@ using UnityEngine;
 
 namespace Agava.TelegramGameTemplate
 {
+    [DefaultExecutionOrder(-1000)]
     public class Boot : MonoBehaviour, ICoroutine
     {
-        [SerializeField] private int _operationsTimeOut = 20;
-        [SerializeField] private string _startScene = "Sample";
-
         private const float InitializationTimeOut = 60;
 
-        private bool _initialized = true;
+        [SerializeField] private int _operationsTimeOut = 20;
+        [SerializeField] private string _startScene = "Sample";
 
         private IEnumerator Start()
         {
             DontDestroyOnLoad(this);
 
             yield return Initialize();
-
-            if (_initialized)
-            {
-                SceneLoader.TryLoadScene(_startScene);
-            }
+            SceneLoader.TryLoadScene(_startScene);
         }
 
         private IEnumerator Initialize()
@@ -40,9 +35,7 @@ namespace Agava.TelegramGameTemplate
 
             while (true)
             {
-                _initialized = botClient.Initialized && botClient.BotResponsive;
-
-                if (_initialized)
+                if (botClient.Initialized && botClient.BotResponsive)
                 {
                     Log.LogSuccessfulMessage("Boot initialized.");
                     break;

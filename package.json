@@ -10,5 +10,12 @@
         "telegram-bot"
     ],
     "name": "com.agava.telegramgametemplate",
+    "samples": [
+        {
+            "description": "Contains Boot scene",
+            "displayName": "Scenes",
+            "path": "Samples~/Scenes"
+        }
+    ],
     "version": "1.0.0"
 }
