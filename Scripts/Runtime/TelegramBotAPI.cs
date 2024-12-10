@@ -25,6 +25,11 @@ namespace Agava.TelegramGameTemplate
             }
         }
 
+        public void CallApiMethod(string methodName, RequestType requestType, Action<Response> onResponse = null)
+        {
+            _botClient.CallApiMethod(methodName, requestType, onResponse);
+        }
+
         public bool TryGetAppUri(string appName, out string appUrl, Dictionary<string, object> parametersDictionary = null)
         {
             if (BotAvailable)
